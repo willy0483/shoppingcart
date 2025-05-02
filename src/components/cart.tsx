@@ -26,7 +26,7 @@ export const Cart = () => {
                     <div className="flex justify-between text-base font-medium text-gray-900">
                       <h3>{product.title}</h3>
                       <p className="ml-4">
-                        {product.price * product.quantity!}
+                        {(product.price * product.quantity!).toFixed(2)}
                       </p>
                     </div>
                   </div>
