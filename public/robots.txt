@@ -1,0 +1,1 @@
+Sitemap: https://shoppingcartw.netlify.app/sitemap.xml
