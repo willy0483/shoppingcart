@@ -58,7 +58,7 @@ export const Head = ({ metaData }: MetaProps) => {
       {ogImage && <meta name="twitter:image" content={ogImage} />}
 
       {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="og/shoppingcart.jpg" />
       {ogUrl && <link rel="canonical" href={ogUrl} />}
     </>
   );
