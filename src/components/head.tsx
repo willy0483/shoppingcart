@@ -1,3 +1,5 @@
+import { Helmet } from "@dr.pogodin/react-helmet";
+
 interface MetaProps {
   metaData: {
     title: string;
@@ -26,7 +28,7 @@ export const Head = ({ metaData }: MetaProps) => {
   } = metaData;
 
   return (
-    <>
+    <Helmet>
       {/* Primary Meta Tags */}
       <title>{title}</title>
       <meta name="title" content={title} />
@@ -60,6 +62,6 @@ export const Head = ({ metaData }: MetaProps) => {
       {/* Favicon */}
       <link rel="icon" href="og/shoppingcart.jpg" />
       {ogUrl && <link rel="canonical" href={ogUrl} />}
-    </>
+    </Helmet>
   );
 };
