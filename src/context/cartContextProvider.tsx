@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useState } from "react";
 import { ProductElement } from "../types/product.types";
 import { CartContext } from "./_cartContext";
+import { toast } from "sonner";
 
 export const CartContextProvider = ({ children }: { children: ReactNode }) => {
   const [cartData, setCartData] = useState<Array<ProductElement>>([]);
@@ -19,6 +20,7 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
       const index = cartData.findIndex((item) => item.id === product.id);
       if (clone[index].quantity) {
         clone[index].quantity += 1;
+        toast("Product added to cart");
       }
       setCartData(clone);
       return;
@@ -34,6 +36,7 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
       const index = cartData.findIndex((item) => item.id === productID);
       if (clone[index].quantity) {
         clone[index].quantity -= 1;
+        toast("One product was remove from cart");
         if (clone[index].quantity <= 0) {
           clone.splice(index, 1);
         }
@@ -47,6 +50,7 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
 
   const clearCart = () => {
     setCartData([]);
+    toast("All product remove from cart");
   };
 
   return (
