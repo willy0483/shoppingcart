@@ -27,9 +27,15 @@ export const Head = ({ metaData }: MetaProps) => {
 
   return (
     <>
+      {/* Primary Meta Tags */}
       <title>{title}</title>
+      <meta name="title" content={title} />
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords.join(", ")} />}
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      {ogUrl && <meta property="og:url" content={ogUrl} />}
       {ogTitle && <meta property="og:title" content={ogTitle} />}
       {ogDescription && (
         <meta property="og:description" content={ogDescription} />
@@ -41,16 +47,17 @@ export const Head = ({ metaData }: MetaProps) => {
       {ogImageHeight && (
         <meta property="og:image:height" content={ogImageHeight.toString()} />
       )}
-      {ogUrl && <meta property="og:url" content={ogUrl} />}
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="ShoppingCart" />
-      <meta property="og:locale" content="da_DK" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      {ogUrl && <meta property="twitter:url" content={ogUrl} />}
       {ogTitle && <meta name="twitter:title" content={ogTitle} />}
       {ogDescription && (
         <meta name="twitter:description" content={ogDescription} />
       )}
       {ogImage && <meta name="twitter:image" content={ogImage} />}
-      <meta name="twitter:card" content="summary_large_image" />
+
+      {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />
       {ogUrl && <link rel="canonical" href={ogUrl} />}
     </>
