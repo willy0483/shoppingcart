@@ -56,7 +56,7 @@ export const HomePage = () => {
                 </p>
                 <div className="mt-2 mb-5 flex items-center justify-between">
                   <p>
-                    <span className="text-3xl font-bold text-slate-900">
+                    <span className="text-3xl font-bold text-slate-800">
                       {product.price} Dkk
                     </span>
                   </p>
