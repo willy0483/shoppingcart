@@ -8,7 +8,7 @@ export const CartPage = () => {
     keywords: ["cart", "shopping", "ecommerce", "ShoppingCart"],
     ogTitle: "ShoppingCart - Din kurv",
     ogDescription: "Se og administrer dine valgte produkter i din indkøbskurv.",
-    ogImage: "/og/shoppingcart.webp",
+    ogImage: "/og/shoppingcart.jpg",
     ogUrl: "https://shoppingcartw.netlify.app",
   };
 

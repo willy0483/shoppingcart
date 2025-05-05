@@ -23,8 +23,8 @@ export const HomePage = () => {
     ogTitle: "ShoppingCart - Vores produkter",
     ogDescription:
       "Velkommen til ShoppingCart! Udforsk vores brede udvalg af produkter.",
-    ogImage: "/og/shoppingcart.webp",
-    ogUrl: "https://shoppingcartw.netlify.app/",
+    ogImage: "/og/shoppingcart.jpg",
+    ogUrl: "https://shoppingcartw.netlify.app",
   };
 
   return (
