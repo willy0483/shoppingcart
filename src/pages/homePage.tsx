@@ -25,6 +25,8 @@ export const HomePage = () => {
       "Velkommen til ShoppingCart! Udforsk vores brede udvalg af produkter.",
     ogImage: "/og/shoppingcart.jpg",
     ogUrl: "https://shoppingcartw.netlify.app",
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
   };
 
   return (

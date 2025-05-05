@@ -10,6 +10,8 @@ export const CartPage = () => {
     ogDescription: "Se og administrer dine valgte produkter i din indkøbskurv.",
     ogImage: "/og/shoppingcart.jpg",
     ogUrl: "https://shoppingcartw.netlify.app",
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
   };
 
   return (

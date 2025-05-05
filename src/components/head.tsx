@@ -6,6 +6,8 @@ interface MetaProps {
     ogTitle?: string;
     ogDescription?: string;
     ogImage?: string;
+    ogImageWidth?: number;
+    ogImageHeight?: number;
     ogUrl?: string;
   };
 }
@@ -18,6 +20,8 @@ export const Head = ({ metaData }: MetaProps) => {
     ogTitle,
     ogDescription,
     ogImage,
+    ogImageWidth,
+    ogImageHeight,
     ogUrl,
   } = metaData;
 
@@ -31,6 +35,12 @@ export const Head = ({ metaData }: MetaProps) => {
         <meta property="og:description" content={ogDescription} />
       )}
       {ogImage && <meta property="og:image" content={ogImage} />}
+      {ogImageWidth && (
+        <meta property="og:image:width" content={ogImageWidth.toString()} />
+      )}
+      {ogImageHeight && (
+        <meta property="og:image:height" content={ogImageHeight.toString()} />
+      )}
       {ogUrl && <meta property="og:url" content={ogUrl} />}
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="ShoppingCart" />

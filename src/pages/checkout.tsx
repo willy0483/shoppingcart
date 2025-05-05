@@ -11,6 +11,8 @@ export const CheckoutPage = () => {
       "Gennemfør dit køb på ShoppingCart. Hurtigt og sikkert checkout.",
     ogImage: "/og/shoppingcart.jpg",
     ogUrl: "https://shoppingcartw.netlify.app",
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
   };
 
   return (
